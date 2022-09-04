@@ -1,0 +1,261 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "dev-build-packages-up-to",
+      "type": "shell",
+      "command": "/home/bot/path_planner_ws/src/path_planning_algos/.devcontainer/build.bash",
+      "args": [
+        "${input:package}",
+        "dev",
+        "false"
+      ],
+      "presentation": {
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "runOptions": {
+        "reevaluateOnRerun": false
+      }
+    },
+    {
+      "label": "debug-build-packages-up-to",
+      "type": "shell",
+      "command": "/home/bot/path_planner_ws/src/path_planning_algos/.devcontainer/build.bash",
+      "args": [
+        "${input:package}",
+        "debug",
+        "false"
+      ],
+      "presentation": {
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "runOptions": {
+        "reevaluateOnRerun": false
+      }
+    },
+    {
+      "label": "dev-build-package-select",
+      "type": "shell",
+      "command": "/home/bot/path_planner_ws/src/path_planning_algos/.devcontainer/build.bash",
+      "args": [
+        "${input:package}",
+        "dev",
+        "true"
+      ],
+      "presentation": {
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "runOptions": {
+        "reevaluateOnRerun": false
+      }
+    },
+    {
+      "label": "release-build-package-select",
+      "type": "shell",
+      "command": "/home/bot/path_planner_ws/src/path_planning_algos/.devcontainer/build.bash",
+      "args": [
+        "${input:package}",
+        "release",
+        "true"
+      ],
+      "presentation": {
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "runOptions": {
+        "reevaluateOnRerun": false
+      }
+    },
+    {
+      "label": "debug-build-package-select",
+      "type": "shell",
+      "command": "/home/bot/path_planner_ws/src/path_planning_algos/.devcontainer/build.bash",
+      "args": [
+        "${input:package}",
+        "debug",
+        "true"
+      ],
+      "presentation": {
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "runOptions": {
+        "reevaluateOnRerun": false
+      }
+    },
+    {
+      "label": "dev-build-app-all",
+      "type": "shell",
+      "command": "/home/bot/path_planner_ws/src/path_planning_algos/.devcontainer/build.bash",
+      "args": [
+        "moveit2_tutorials",
+        "dev",
+        ""
+      ],
+      "presentation": {
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "dev-build-app-all-reduced-cores",
+      "type": "shell",
+      "command": "/home/bot/path_planner_ws/src/path_planning_algos/.devcontainer/build.bash",
+      "args": [
+        "moveit2_tutorials",
+        "dev",
+        "parallel-workers 4"
+      ],
+      "presentation": {
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "release-build-app-all-reduced-cores",
+      "type": "shell",
+      "command": "/home/bot/path_planner_ws/src/path_planning_algos/.devcontainer/build.bash",
+      "args": [
+        "moveit2_tutorials",
+        "release",
+        "parallel-workers 4"
+      ],
+      "presentation": {
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "alternative-release-build-app-all-reduced-cores",
+      "type": "shell",
+      "command": "/home/bot/path_planner_ws/src/path_planning_algos/.devcontainer/alternative_build.bash",
+      "args": [
+        "release",
+        "parallel-workers 4"
+      ],
+      "presentation": {
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "debug-build-app-all",
+      "type": "shell",
+      "command": "/home/bot/path_planner_ws/src/path_planning_algos/.devcontainer/build.bash",
+      "args": [
+        "ros2_mapping",
+        "debug",
+        ""
+      ],
+      "presentation": {
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "clang-format-app",
+      "type": "shell",
+      "command": "/home/bot/path_planner_ws/src/path_planning_algos/.devcontainer/clang-format-app.bash",
+      "presentation": {
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "launch-terminator",
+      "type": "shell",
+      "command": "terminator -u --title path_planning",
+      "presentation": {
+        "panel": "dedicated",
+        "reveal": "never"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "autoflake-remove-all-unused-imports",
+      "type": "shell",
+      "command": "/usr/bin/python3",
+      "args": [
+        "-m",
+        "autoflake",
+        "-i",
+        "--remove-all-unused-imports",
+        "${file}"
+      ],
+      "presentation": {
+        "panel": "dedicated",
+        "reveal": "never"
+      },
+      "problemMatcher": []
+    },
+  ],
+  "inputs": [
+    {
+      "type": "pickString",
+      "id": "package",
+      "description": "The package to select",
+      "options": [
+        "rosparam_shortcuts",
+        "moveit2_tutorials",
+        "moveit_task_constructor",
+        "hello_moveit",
+        "mtc_tutorial"
+      ],
+      "default": "ros2_mapping"
+    }
+  ]
+}

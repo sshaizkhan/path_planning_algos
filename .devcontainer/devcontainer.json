@@ -1,0 +1,46 @@
+{
+  "name": "path_planning",
+  "image": "moveit/moveit2:humble",
+  "runArgs": [
+    "--cap-add=SYS_PTRACE",
+    "--security-opt=seccomp=unconfined",
+    "--gpus=all",
+    "--volume=/tmp/.X11-unix:/tmp/.X11-unix",
+    "--device-cgroup-rule=c 189:* rmw",
+    "--volume=/dev/bus/usb:/dev/bus/usb:ro",
+    "--volume=/dev/input:/dev/input:ro", // required for open3d visualization
+    "--network=host",
+    "--privileged",
+    "--env-file",
+    "../devcontainer.env"
+  ],
+  "containerEnv": {
+    "DISPLAY": "${localEnv:DISPLAY}",
+    "CONTAINER_NAME": "path_planning",
+    "TZ": "America/New_York"
+  },
+  // Add the IDs of extensions you want installed when the container is created.
+  "extensions": [
+    "ms-vscode.cpptools",
+    "ms-python.vscode-pylance",
+    "ms-python.python",
+    "twxs.cmake",
+    "ms-vscode.cmake-tools",
+    "mutantdino.resourcemonitor",
+    "mhutchie.git-graph",
+    "grapecity.gc-excelviewer",
+    "coenraads.bracket-pair-colorizer",
+    "ms-vscode.cpptools-extension-pack"
+  ],
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "/bin/bash ./path_planner_ws/src/path_planning_algos/.devcontainer/post_create.bash",
+  // // Use 'postAttachCommand' to run commands each time you attach to the container.
+  "postAttachCommand": "/bin/bash ./path_planner_ws/src/path_planning_algos/.devcontainer/post_attach.bash",
+  // Mount aio_palletizing_app under src/
+  "workspaceMount": "source=${localWorkspaceFolder}/../../,target=/home/bot/path_planner_ws/,type=bind,consistency=cached",
+  "workspaceFolder": "/home/bot",
+  // Connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
+  "remoteUser": "bot",
+  // See https://code.visualstudio.com/docs/remote/containers-advanced#_specifying-the-default-container-user
+  "containerUser": "bot"
+}
