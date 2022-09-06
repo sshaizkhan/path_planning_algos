@@ -31,7 +31,6 @@
 	"grapecity.gc-excelviewer",
 	"coenraads.bracket-pair-colorizer",
 	"ms-vscode.cpptools-extension-pack",
-	"josetr.cmake-language-support-vscode",
 	"ms-iot.vscode-ros"
 ],
   // Use 'postCreateCommand' to run commands after the container is created.

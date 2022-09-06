@@ -15,6 +15,7 @@
   <depend>rclcpp</depend>
   <depend>std_msgs</depend>
   <depend>matplotlib_cpp</depend>
+  <depend>RRTSim</depend>
 
 
   <export>

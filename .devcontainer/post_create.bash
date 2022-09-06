@@ -15,6 +15,12 @@ sudo apt-get -y install python3-pip
 #install nano
 sudo apt-get -y install nano
 
+# Install bash-completion
+sudo apt-get -y install bash-completion
+
+# Install Clang-format-11
+sudo apt-get -y install clang-format-11
+
 colcon --log-base "./colcon-log" mixin add default "file://`pwd`//path_planner_ws/src/path_planning_algos/.devcontainer/colcon_mixins/index.yaml"
 
 sudo chown -R bot:bot /home/bot

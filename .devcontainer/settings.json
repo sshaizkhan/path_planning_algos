@@ -12,7 +12,7 @@
   "[cpp]": {
     "editor.defaultFormatter": "ms-vscode.cpptools"
   },
-  "C_Cpp.clang_format_path": "/usr/bin/clang-format-7",
+  "C_Cpp.clang_format_path": "/usr/bin/clang-format-11",
   "C_Cpp.clang_format_style": "file",
   "python.defaultInterpreterPath": "/usr/bin/python3",
   "python.analysis.extraPaths": [

@@ -116,7 +116,7 @@
       "type": "shell",
       "command": "/home/bot/path_planner_ws/src/path_planning_algos/.devcontainer/build.bash",
       "args": [
-        "moveit2_tutorials",
+        "rrt",
         "dev",
         ""
       ],
