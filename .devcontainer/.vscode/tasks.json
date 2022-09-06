@@ -249,11 +249,9 @@
       "id": "package",
       "description": "The package to select",
       "options": [
-        "rosparam_shortcuts",
-        "moveit2_tutorials",
-        "moveit_task_constructor",
-        "hello_moveit",
-        "mtc_tutorial"
+        "rrt",
+        "matplotlib_cpp",
+        "RRTSim"
       ],
       "default": "ros2_mapping"
     }

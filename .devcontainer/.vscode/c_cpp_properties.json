@@ -8,7 +8,9 @@
             "cppStandard": "c++17",
             "includePath": [
                 "/opt/ros/humble/include/**",
-                "${workspaceFolder}/src/**"
+                "${workspaceFolder}/path_planner_ws/src/**",
+                "/usr/bin/**",
+                "/usr/lib/x86_64-linux-gnu"
             ],
             "compileCommands": "/home/bot/path_planner_ws/build-dev/compile_commands.json",
             "intelliSenseMode": "gcc-x64"
@@ -21,9 +23,10 @@
             "cppStandard": "c++17",
             "includePath": [
                 "/opt/ros/humble/include/**",
-                "${workspaceFolder}/src/**"
+                "${workspaceFolder}/src/**",
+                "/usr/bin/**"
             ],
-            "compileCommands": "/home/bot/path_planner_ws/build-release/compile_commands.json",
+            "compileCommands": "/home/bot/path_planner_ws/build-dev/compile_commands.json",
             "intelliSenseMode": "gcc-x64"
         },
         {
@@ -35,7 +38,8 @@
             "includePath": [
                 "/opt/ros/humble/include/**",
                 "${workspaceFolder}/**",
-                "/usr/include/eigen3"
+                "/usr/include/eigen3",
+                "/usr/bin/**"
             ],
             "compileCommands": "/home/bot/path_planner_ws/build-debug/compile_commands.json",
             "intelliSenseMode": "gcc-x64",

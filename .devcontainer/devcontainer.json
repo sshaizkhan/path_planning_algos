@@ -21,17 +21,19 @@
   },
   // Add the IDs of extensions you want installed when the container is created.
   "extensions": [
-    "ms-vscode.cpptools",
-    "ms-python.vscode-pylance",
-    "ms-python.python",
-    "twxs.cmake",
-    "ms-vscode.cmake-tools",
-    "mutantdino.resourcemonitor",
-    "mhutchie.git-graph",
-    "grapecity.gc-excelviewer",
-    "coenraads.bracket-pair-colorizer",
-    "ms-vscode.cpptools-extension-pack"
-  ],
+	"ms-vscode.cpptools",
+	"ms-python.vscode-pylance",
+	"ms-python.python",
+	"twxs.cmake",
+	"ms-vscode.cmake-tools",
+	"mutantdino.resourcemonitor",
+	"mhutchie.git-graph",
+	"grapecity.gc-excelviewer",
+	"coenraads.bracket-pair-colorizer",
+	"ms-vscode.cpptools-extension-pack",
+	"josetr.cmake-language-support-vscode",
+	"ms-iot.vscode-ros"
+],
   // Use 'postCreateCommand' to run commands after the container is created.
   "postCreateCommand": "/bin/bash ./path_planner_ws/src/path_planning_algos/.devcontainer/post_create.bash",
   // // Use 'postAttachCommand' to run commands each time you attach to the container.

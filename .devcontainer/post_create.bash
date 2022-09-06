@@ -9,7 +9,8 @@ sudo add-apt-repository ppa:gnome-terminator
 sudo apt-get update
 sudo apt-get install -y terminator
 
-
+# Instll python-pip3
+sudo apt-get -y install python3-pip
 
 #install nano
 sudo apt-get -y install nano
