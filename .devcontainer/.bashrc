@@ -121,9 +121,9 @@ echo "Sourcing: /opt/ros/humble/setup.bash"
 source /opt/ros/humble/setup.bash
 
 # Source the aio_palletizing_app environment if it exists:
-if test -f "src/moveit2_ws/install/setup.bash"; then
-  echo "Sourcing: /moveit2_app/install/setup.bash"
-  source src/moveit2_ws/install/setup.bash
+if test -f "/home/bot/path_planner_ws/install/setup.bash"; then
+  echo "Sourcing: /home/bot/path_planner_ws/install/setup.bash"
+  source /home/bot/path_planner_ws/install/setup.bash
 fi
 
 # Add Python3 paths
