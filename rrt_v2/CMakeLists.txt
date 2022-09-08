@@ -38,7 +38,7 @@ endif()
 
 
 set(SOURCE_FILES
-  src/rrt.cpp
+  src/rrt_v2.cpp
 )
 add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES})
 
