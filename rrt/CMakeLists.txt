@@ -1,15 +1,24 @@
 cmake_minimum_required(VERSION 3.8)
 project(rrt)
 
+set(default_build_type "Release")
+
+if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
+  message(STATUS "Setting build type to '${default_build_type}' as none was specified.")
+  set(CMAKE_BUILD_TYPE "${default_build_type}" CACHE
+    STRING "Choose the type of build." FORCE)
+endif()
+
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
-set(CMAKE_INCLUDE_CURRENT_DIR ON)
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
-set(CMAKE_CXX_FLAGS "-march=native -O3 -Wall")
+set(CMAKE_CXX_FLAGS "-Wall -Wextra -Wpedantic -Wunused-parameter")
+set(CMAKE_CXX_FLAGS_DEBUG "-g -O0")
+set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 
-if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-  add_compile_options(-Wall -Wextra -Wpedantic)
-endif()
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
@@ -39,7 +48,8 @@ set(SOURCE_FILES
   src/path_planning_rrt.cpp
 )
 
-add_executable(${PROJECT_NAME} ${SOURCE_FILES})
+# add_executable(${PROJECT_NAME} ${SOURCE_FILES})
+add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES})
 
 ament_target_dependencies(${PROJECT_NAME}
   rclcpp
@@ -51,11 +61,15 @@ target_link_libraries(${PROJECT_NAME} Qt5::Widgets Qt5::Gui ${PYTHON_LIBRARIES})
 
 install(TARGETS
   ${PROJECT_NAME}
-  DESTINATION lib/${PROJECT_NAME})
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION bin)
 
-install(DIRECTORY include/
-  DESTINATION include
-)
+install(DIRECTORY
+  include/
+  DESTINATION include)
+
+ament_export_libraries(${PROJECT_NAME})
 ament_export_include_directories(include)
 
 ament_package()

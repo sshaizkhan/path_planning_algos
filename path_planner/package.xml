@@ -15,6 +15,9 @@
   <exec_depend>matplotlib_cpp</exec_depend>
   <exec_depend>RRTSim</exec_depend>
   <exec_depend>rrt</exec_depend>
+  <exec_depend>rrt_v2</exec_depend>
+  <exec_depend>utils</exec_depend>
+
 
   <export>
     <build_type>ament_cmake</build_type>
