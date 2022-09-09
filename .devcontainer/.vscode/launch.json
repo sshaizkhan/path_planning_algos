@@ -2,14 +2,13 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "g++ build and debug active file",
+      "name": "rrt_v2",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "program": "/home/bot/path_planner_ws/install/rrt_v2/lib/rrt_v2/rrt_v2",
       "args": [],
       "stopAtEntry": false,
-      "cwd": "${workspaceFolder}",
-      "environment": [],
+      "cwd": "/home/bot",
       "externalConsole": false,
       "MIMode": "gdb",
       "setupCommands": [
@@ -19,7 +18,6 @@
           "ignoreFailures": true
         }
       ],
-      "preLaunchTask": "g++ build active file",
       "miDebuggerPath": "/usr/bin/gdb"
     }
   ]
