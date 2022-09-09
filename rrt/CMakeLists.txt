@@ -48,8 +48,8 @@ set(SOURCE_FILES
   src/path_planning_rrt.cpp
 )
 
-# add_executable(${PROJECT_NAME} ${SOURCE_FILES})
-add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES})
+add_executable(${PROJECT_NAME} ${SOURCE_FILES})
+# add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES})
 
 ament_target_dependencies(${PROJECT_NAME}
   rclcpp
@@ -61,15 +61,17 @@ target_link_libraries(${PROJECT_NAME} Qt5::Widgets Qt5::Gui ${PYTHON_LIBRARIES})
 
 install(TARGETS
   ${PROJECT_NAME}
-  ARCHIVE DESTINATION lib
-  LIBRARY DESTINATION lib
-  RUNTIME DESTINATION bin)
+  DESTINATION lib/${PROJECT_NAME}
+)
+install(TARGETS
+  ${PROJECT_NAME}
+  DESTINATION share/${PROJECT_NAME}
+)
 
 install(DIRECTORY
   include/
-  DESTINATION include)
+  DESTINATION include
+)
 
-ament_export_libraries(${PROJECT_NAME})
-ament_export_include_directories(include)
 
 ament_package()
