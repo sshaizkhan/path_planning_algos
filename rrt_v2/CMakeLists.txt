@@ -40,7 +40,8 @@ endif()
 set(SOURCE_FILES
   src/rrt_v2.cpp
 )
-add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES})
+
+add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 
 ament_target_dependencies(${PROJECT_NAME}
   rclcpp
@@ -48,18 +49,19 @@ ament_target_dependencies(${PROJECT_NAME}
   utils
 )
 
-
 install(TARGETS
   ${PROJECT_NAME}
-  ARCHIVE DESTINATION lib
-  LIBRARY DESTINATION lib
-  RUNTIME DESTINATION bin)
+  DESTINATION lib/${PROJECT_NAME}
+)
+install(TARGETS
+  ${PROJECT_NAME}
+  DESTINATION share/${PROJECT_NAME}
+)
 
 install(DIRECTORY
   include/
-  DESTINATION include)
+  DESTINATION include
+)
 
-ament_export_libraries(${PROJECT_NAME})
-ament_export_include_directories(include)
 
 ament_package()
