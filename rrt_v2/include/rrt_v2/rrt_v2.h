@@ -36,7 +36,7 @@ private:
   /// @brief Find the nearest Node that has been seen by the algo. This does not consider cost to reach the node
   /// @param new_node Node to which the nearest node must be found
   /// @return nearest node
-  std::tuple<bool, Node> FindNearestPoint(Node &new_node);
+  std::tuple<bool, Node> FindNearestPoint(Node& new_node);
 
   /// @brief Check if there is any obstacle between the two nodes (obstacles are in grid so sqaure shape)
   /// @param n1 Node 1
@@ -67,8 +67,8 @@ private:
   std::unordered_map<Node, std::vector<Node>> near_nodes_;
 
   std::vector<Node> obstacles_list_;
-  double threashold_ = 1.5;    // Read from json file
-  int max_iter_x_factor = 500; // Read from json file
+  double threshold_ = 1.5;    // Read from json file
+  int max_iter_x_factor_ = 500; // Read from json file
 };
 
 #endif //RRT_H
