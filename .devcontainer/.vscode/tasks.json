@@ -254,7 +254,8 @@
         "matplotlib_cpp",
         "RRTSim",
         "utils",
-        "rrt_v2"
+        "rrt_v2",
+        "gnu_rrt_plotting"
       ],
       "default": "path_planner"
     }
