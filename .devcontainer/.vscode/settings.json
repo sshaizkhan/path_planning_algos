@@ -1,5 +1,5 @@
 {
-    "python.formatting.provider": "yapf",
+    "python.formatting.provider": "black",
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": true,
     "workbench.editor.highlightModifiedTabs": true,
