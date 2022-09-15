@@ -242,6 +242,16 @@
       },
       "problemMatcher": []
     },
+    {
+      "label": "install-python-deps",
+      "type": "shell",
+      "command": "/home/bot/path_planner_ws/src/path_planning_algos/scripts/install_python_deps.sh",
+      "presentation": {
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
   ],
   "inputs": [
     {
