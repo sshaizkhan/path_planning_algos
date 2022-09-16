@@ -3,3 +3,4 @@ install/
 build-dev/
 build/
 *.gif
+__pycache__
