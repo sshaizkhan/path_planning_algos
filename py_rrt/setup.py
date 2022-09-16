@@ -15,11 +15,10 @@ setup(
     zip_safe=True,
     maintainer='bot',
     maintainer_email='sshaizkhan@gmail.com',
-    description='TODO: Package description',
-    license='TODO: License declaration',
+    description='Python based RRT planning algo',
+    license='MIT',
     tests_require=['pytest'],
     entry_points={
-        'console_scripts': [
-        ],
+        'console_scripts': ["python_rrt = py_rrt.main:main"],
     },
 )

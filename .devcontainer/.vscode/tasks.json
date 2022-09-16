@@ -265,7 +265,8 @@
         "RRTSim",
         "utils",
         "rrt_v2",
-        "gnu_rrt_plotting"
+        "gnu_rrt_plotting",
+        "py_rrt"
       ],
       "default": "path_planner"
     }
