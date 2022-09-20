@@ -266,7 +266,9 @@
         "utils",
         "rrt_v2",
         "gnu_rrt_plotting",
-        "py_rrt"
+        "py_rrt",
+        "py_sub",
+        "cpp_pub"
       ],
       "default": "path_planner"
     }
