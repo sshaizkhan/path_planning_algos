@@ -116,7 +116,7 @@
       "type": "shell",
       "command": "/home/bot/path_planner_ws/src/path_planning_algos/.devcontainer/build.bash",
       "args": [
-        "moveit2_tutorials",
+        "path_planner",
         "dev",
         ""
       ],
@@ -249,11 +249,12 @@
       "id": "package",
       "description": "The package to select",
       "options": [
+        "path_planner",
         "rrt",
         "matplotlib_cpp",
         "RRTSim"
       ],
-      "default": "ros2_mapping"
+      "default": "path_planner"
     }
   ]
 }

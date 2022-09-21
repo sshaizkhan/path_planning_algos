@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>rrt</name>
-  <version>0.0.1</version>
-  <description>RRT Algo implementation</description>
+  <name>path_planner</name>
+  <version>1.0.0</version>
+  <description>Path planners packages manager</description>
   <maintainer email="sshaizkhan@gmail.com">bot</maintainer>
   <license>MIT</license>
 
@@ -12,14 +12,11 @@
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
 
-  <depend>rclcpp</depend>
-  <depend>std_msgs</depend>
-  <depend>matplotlib_cpp</depend>
-  <depend>RRTSim</depend>
-
+  <exec_depend>matplotlib_cpp</exec_depend>
+  <exec_depend>RRTSim</exec_depend>
+  <exec_depend>rrt</exec_depend>
 
   <export>
     <build_type>ament_cmake</build_type>
-
   </export>
 </package>

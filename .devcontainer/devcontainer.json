@@ -30,9 +30,9 @@
 	"mhutchie.git-graph",
 	"grapecity.gc-excelviewer",
 	"coenraads.bracket-pair-colorizer",
-	"ms-vscode.cpptools-extension-pack",
-	"josetr.cmake-language-support-vscode",
-	"ms-iot.vscode-ros"
+	"ms-iot.vscode-ros",
+	"eamodio.gitlens",
+	"DotJoshJohnson.xml"
 ],
   // Use 'postCreateCommand' to run commands after the container is created.
   "postCreateCommand": "/bin/bash ./path_planner_ws/src/path_planning_algos/.devcontainer/post_create.bash",
