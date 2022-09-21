@@ -268,7 +268,8 @@
         "gnu_rrt_plotting",
         "py_rrt",
         "py_sub",
-        "cpp_pub"
+        "cpp_pub",
+        "path_planner_interfaces"
       ],
       "default": "path_planner"
     }
