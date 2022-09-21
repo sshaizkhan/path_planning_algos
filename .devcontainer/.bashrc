@@ -128,7 +128,7 @@ fi
 
 # Add Python3 paths
 export PATH=$PATH:~/.local/bin/
-export PYTHONPATH=$PYTHONPATH:~/install/lib/python3.7/site-packages
-
+export PYTHONPATH=$PYTHONPATH:~/path_planner_ws/install/lib/python3.10/site-packages
+export PYTHONPATH=$PYTHONPATH:~/path_planner_ws/install/local/lib/python3.10/dist-packages
 # Set all the env variables defined in devcontainer.env
 # export $(cat /aio_palletizing_app/src/devcontainer.env | sed '/#/d')
