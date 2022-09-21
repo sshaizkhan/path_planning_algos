@@ -12,11 +12,17 @@
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
 
+  <exec_depend>launch_ros</exec_depend>
   <exec_depend>matplotlib_cpp</exec_depend>
   <exec_depend>RRTSim</exec_depend>
   <exec_depend>rrt</exec_depend>
   <exec_depend>rrt_v2</exec_depend>
   <exec_depend>utils</exec_depend>
+  <exec_depend>cpp_pub</exec_depend>
+  <exec_depend>gnu_rrt_plotting</exec_depend>
+  <exec_depend>path_planner_interfaces</exec_depend>
+  <exec_depend>py_rrt</exec_depend>
+  <exec_depend>py_sub</exec_depend>
 
 
   <export>
